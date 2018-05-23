@@ -1,5 +1,4 @@
 import React from 'react';
-
 /*
  * CardGroup
  * This component takes Card components as children and renders them.
@@ -12,7 +11,6 @@ import React from 'react';
  * The above would render a card group with a single child in it.
  *
  */
-
 const CardGroup = (props) => (
     <div className="cardGroup">
         {props.children}
