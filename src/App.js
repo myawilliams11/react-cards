@@ -13,21 +13,6 @@ import React from 'react';
  *
  */
 
-// const Hello = props => (
-//     <div>
-//         <h1>Hello, there!</h1>
-//         {props.message && <p>{props.message}</p>}
-//     </div>
-// );
-
-// const App = () => (
-//     <div>
-//         <Hello />
-//         <Hello message="Pleased to meet you!" />
-//     </div>
-// );
-
-
 const CardGroup = (props) => (
     <div className="cardGroup">
         {props.children}
@@ -40,7 +25,7 @@ const Card = (props) => (
         <div className={"icon fa " + props.icon + " card__descriptionIcon"} />
         <div className="card__descriptionText">
             {props.description}
-            {props.hint}
+            {props.hint && <React.Fragment><br/>({props.hint})</React.Fragment>}
         </div>
     </div>
     <div className="card__price">{props.price}</div>
@@ -52,9 +37,7 @@ const App = () => (
         <Card description= "Trial" icon="fa-thumbs-o-up" price="Free!"/>   
         <Card description= "Basic tier" icon="fa-trophy" price="$10.00" hint="most popular"/>   
         <Card description= "Advanced tier" icon="fa-bolt" price="$6,000.00" hint="only for enterprise-level professionals"/>  
-
    </CardGroup>
-
 );
 
 export default App;
